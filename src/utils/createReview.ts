@@ -22,7 +22,7 @@ export const createReview = (review: GeneratedReview) => {
   console.log('Posting Following Review', data);
   return axios.post('https://liveapi.yext.com/v2/accounts/me/reviewSubmission', data, {
     params: {
-      api_key: '4713ffe98b0555863dc658b2d7d55f35',
+      api_key: '7579d93a8ebdcbe477e3f59f50376a04',
       v: 20220101,
     },
   });
