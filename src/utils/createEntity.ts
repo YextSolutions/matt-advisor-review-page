@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-type GeneratedReview = {
+type GeneratedEntity = {
   entity: {
     id: string;
   };
@@ -13,14 +13,30 @@ type GeneratedReview = {
   invitationUid?: string;
 };
 
-export const createReview = (review: GeneratedReview) => {
+// {
+//   "EntityType": "string",
+//   "meta": {
+//     "countryCode": "string",
+//     "folderId": "string",
+//     "id": "string",
+//     "labels": [
+//       "string"
+//     ],
+//     "language": "string"
+//   },
+//   "name": "string"
+// }
+
+
+
+export const createEntity = (entity: GeneratedEntity) => {
   // Get curent date as YYYY-MM-DD
   const reviewDate = new Date().toISOString().split('T')[0];
 
-  const data = { ...review, reviewDate };
+  const data = { ...entity, reviewDate };
 
   console.log('Posting Following Review', data);
-  return axios.post('https://liveapi.yext.com/v2/accounts/me/reviewSubmission', data, {
+  return axios.post('https://api.yext.com/v2/accounts/me/entities', data, {
     params: {
       api_key: '7579d93a8ebdcbe477e3f59f50376a04',
       v: 20220101,
@@ -28,4 +44,4 @@ export const createReview = (review: GeneratedReview) => {
   });
 };
 
-export default createReview;
+export default createEntity;
