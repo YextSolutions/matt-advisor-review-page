@@ -33,4 +33,4 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
   });
 };
 
-export default createEntity;
+export default sendTestimonialToFunction;
