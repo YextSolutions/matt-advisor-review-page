@@ -29,17 +29,17 @@ type GeneratedEntity = {
 
 
 
-export const createEntity = (entity: GeneratedEntity) => {
+export const createEntity = (testimonial: GeneratedEntity) => {
   // Get curent date as YYYY-MM-DD
   const reviewDate = new Date().toISOString().split('T')[0];
 
-  const data = { ...entity, reviewDate };
+  const data = { ...testimonial, reviewDate };
 
   console.log('Posting Following Review', data);
-  return axios.post('https://api.yext.com/v2/accounts/me/entities', data, {
+  return axios.get ('https://huma4jczdk-41836-d.preview.pagescdn.com/functions/api/serverless/endpoint.ts', {
     params: {
-      api_key: '7579d93a8ebdcbe477e3f59f50376a04',
-      v: 20220101,
+      entityId: testimonial.entity.id,
+      title: testimonial.title,
     },
   });
 };
