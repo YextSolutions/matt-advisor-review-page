@@ -21,7 +21,7 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
   const data = { ...testimonial};
 
   console.log('Posting Following Review', data);
-  return axios.get ('https://gains-lather-catatonic.pgsdemo.com/functions/api/serverless/createTestimonial.ts', {
+  return axios.get ('https://gains-lather-catatonic.pgsdemo.com/serverless/createTestimonial', {
     params: {
       title: testimonial.title,
       author: testimonial.authorName,
