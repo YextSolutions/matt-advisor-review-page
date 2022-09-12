@@ -36,7 +36,7 @@ export const createEntity = (testimonial: GeneratedEntity) => {
   const data = { ...testimonial, reviewDate };
 
   console.log('Posting Following Review', data);
-  return axios.get ('https://huma4jczdk-41836-d.preview.pagescdn.com/functions/api/serverless/endpoint.ts', {
+  return axios.get ('https://huma4jczdk-41836-d.preview.pagescdn.com/functions/api/serverless/createTestimonial.ts', {
     params: {
       entityId: testimonial.entity.id,
       title: testimonial.title,
