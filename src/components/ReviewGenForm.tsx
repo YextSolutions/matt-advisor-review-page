@@ -3,7 +3,7 @@ import cx from "classnames";
 import { useState } from "react";
 
 import { FaChevronRight } from "react-icons/fa";
-import createReview from "../utils/createReview";
+import sendTestimonialToFunction from "../utils/sendTestimonialToFunction";
 import Form from "./Form";
 import Input from "./Input";
 import RadioInput from "./RadioInput";
