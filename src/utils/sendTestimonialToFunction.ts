@@ -1,6 +1,9 @@
 import axios from 'axios';
 
 type testimonialSubmission = {
+  entity: {
+    id: string;
+  };
   authorName: string;
   authorEmail: string;
   title: string;
