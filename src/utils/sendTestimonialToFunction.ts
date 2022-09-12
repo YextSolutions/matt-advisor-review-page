@@ -21,7 +21,7 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
   const data = { ...testimonial};
 
   console.log('Posting Following Review', data);
-  return axios.get ('https://huma4jczdk-41836-d.preview.pagescdn.com/functions/api/serverless/createTestimonial.ts', {
+  return axios.get ('https://huma4jczdk-41836-d.preview.pagescdn.com/functions/api/serverless/createTestimonial', {
     params: {
       title: testimonial.title,
       author: testimonial.authorName,
