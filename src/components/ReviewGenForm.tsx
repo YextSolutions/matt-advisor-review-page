@@ -84,7 +84,7 @@ const ReviewGenForm = ({
 
                 console.log(reviewLabelNames);
 
-                await createEntity({
+                await sendTestimonialToFunction({
                   ...rest,
                   entity: {
                     id: advisorId,
