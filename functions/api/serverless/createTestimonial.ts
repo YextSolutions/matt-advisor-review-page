@@ -25,9 +25,8 @@ export async function main(argumentJson) {
         cache: 'no-cache',
         credentials: 'same-origin',
         headers: {
-            'Content-Type': 'application/json'
-			   'Cache-control': 'no-cache',
-		},
+            'Content-Type': 'application/json',
+	    'Cache-control': 'no-cache'
         },
         redirect: 'follow',
         body: JSON.stringify(data)
