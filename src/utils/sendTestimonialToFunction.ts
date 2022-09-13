@@ -28,7 +28,8 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       authorEmail: testimonial.authorEmail,
       content: testimonial.content,
       labels: testimonial.reviewLabelNames,
-      locationId: testimonial.entity.id
+      locationId: testimonial.entity.id,
+      rating: testimonial.rating
     },
   });
 };
