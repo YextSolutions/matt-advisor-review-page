@@ -8,6 +8,7 @@ export async function main(argumentJson) {
    let authorEmail = urlParams.get("authorEmail");
    let content = urlParams.get("content");
    let labels = urlParams.get("labels");
+   let rating = urlParams.get("rating");
    let key = "7579d93a8ebdcbe477e3f59f50376a04";
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
@@ -16,7 +17,8 @@ export async function main(argumentJson) {
         "c_author": author,
         "c_authorEmail": authorEmail,
         "c_content" : content,
-        "c_labels" : labels
+        "c_labels" : labels,
+	"c_rating" : rating
        }
    
     const response = await fetch(postUrl, {
