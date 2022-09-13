@@ -30,5 +30,8 @@ export async function main(argumentJson) {
         redirect: 'follow',
         body: JSON.stringify(data),
       });
-return null
+   return {
+      "body" : "",
+      "statusCode" : 200
+   }
 }
