@@ -7,7 +7,7 @@ type testimonialSubmission = {
   authorName: string;
   authorEmail: string;
   title: string;
-  rating: 1 | 2 | 3 | 4 | 5;
+  rating: number;
   content: string;
   reviewLabelNames: string[];
   invitationUid?: string;
