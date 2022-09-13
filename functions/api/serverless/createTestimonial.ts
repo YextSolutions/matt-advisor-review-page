@@ -26,9 +26,11 @@ export async function main(argumentJson) {
         credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
+			   'Cache-control': 'no-cache',
+		},
         },
         redirect: 'follow',
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       });
    return {
       "body" : "",
