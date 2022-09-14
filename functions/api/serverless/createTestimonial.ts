@@ -17,7 +17,7 @@ export async function main(argumentJson) {
         "c_author": author,
         "c_authorEmail": authorEmail,
         "c_content" : content,
-        "c_labels" : labels,
+        "c_labels" : "[" + labels + "]",
 	"c_rating" : rating
        }
    
