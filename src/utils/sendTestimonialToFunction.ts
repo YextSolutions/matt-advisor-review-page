@@ -27,7 +27,9 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       author: testimonial.authorName,
       authorEmail: testimonial.authorEmail,
       content: testimonial.content,
-      labels: testimonial.reviewLabelNames,
+      label1: testimonial.reviewLabelNames[0],
+      label2: testimonial.reviewLabelNames[1],
+      label3: testimonial.reviewLabelNames[2],
       locationId: testimonial.entity.id,
       rating: testimonial.rating
     },
