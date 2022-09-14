@@ -34,7 +34,6 @@ export async function main(argumentJson) {
         body: JSON.stringify(data)
       });
    return {
-	"body" : response.body,
   	"statusCode" : 200,
 	"status": response.status
    }
