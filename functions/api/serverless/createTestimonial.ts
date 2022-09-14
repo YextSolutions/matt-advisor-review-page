@@ -7,7 +7,9 @@ export async function main(argumentJson) {
    let author = urlParams.get("author");
    let authorEmail = urlParams.get("authorEmail");
    let content = urlParams.get("content");
-   let labels = urlParams.get("labels[]");
+   let label1 = urlParams.get("label1");
+   let label2 = urlParams.get("label2");
+   let label3 = urlParams.get("label3");
    let rating = urlParams.get("rating");
    let advisor = urlParams.get("locationId");
    let key = "7579d93a8ebdcbe477e3f59f50376a04";
@@ -19,7 +21,7 @@ export async function main(argumentJson) {
         "c_authorEmail": authorEmail,
         "c_content" : content,
 	"c_rating" : rating,
-	"c_labels" : [labels],
+	"c_labels" : [label1, label2, label3],
 	"c_location" : [advisor]
        }
    
