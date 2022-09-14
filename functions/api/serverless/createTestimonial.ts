@@ -7,7 +7,7 @@ export async function main(argumentJson) {
    let author = urlParams.get("author");
    let authorEmail = urlParams.get("authorEmail");
    let content = urlParams.get("content");
-   let labels = urlParams.get("labels");
+   let labels = urlParams.get("labels[]");
    let rating = urlParams.get("rating");
    let key = "7579d93a8ebdcbe477e3f59f50376a04";
  
