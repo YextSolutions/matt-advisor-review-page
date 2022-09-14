@@ -19,7 +19,7 @@ export async function main(argumentJson) {
         "c_authorEmail": authorEmail,
         "c_content" : content,
 	"c_rating" : rating,
-	"c_location" : advisor
+	"c_location" : [advisor]
        }
    
     const response = await fetch(postUrl, {
