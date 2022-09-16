@@ -70,9 +70,9 @@ const ReviewGenForm = ({
                 compensation,
                 ...rest
               }) => {
-                const label1 = "";
-                const label2 = "";
-                const label3 = "";
+                var label1 = "";
+                var label2 = "";
+                var label3 = "";
 
                 if (conflictOfInterest === "YES") {
                   label1 = "CONFLICT_OF_INTEREST";
