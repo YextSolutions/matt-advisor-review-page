@@ -70,26 +70,30 @@ const ReviewGenForm = ({
                 compensation,
                 ...rest
               }) => {
-                const reviewLabelNames = [];
+                const label1 = "";
+                const label2 = "";
+                const label3 = "";
 
                 if (conflictOfInterest === "YES") {
-                  reviewLabelNames.push("CONFLICT_OF_INTEREST");
+                  label1 = "CONFLICT_OF_INTEREST";
                 }
                 if (compensation === "YES") {
-                  reviewLabelNames.push("COMPENSATION");
+                  label2 = "COMPENSATION";
                 }
                 if (relationship === "YES") {
-                  reviewLabelNames.push("CURRENT_CLIENT");
+                  label3 = "CURRENT_CLIENT";
                 }
 
-                console.log(reviewLabelNames);
+                console.log(label1, label2, label3);
 
                 await sendTestimonialToFunction({
                   ...rest,
                   entity: {
                     id: advisorId,
                   },
-                  reviewLabelNames,
+                  label1,
+                  label2,
+                  label3,
                   invitationUid,
                 });
                 setReviewSubmitted(true);
