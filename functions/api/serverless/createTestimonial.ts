@@ -24,7 +24,7 @@ export async function main(argumentJson) {
 	"c_rating" : rating,
 	"c_labels" : [label1, label2, label3],
 	"c_location" : [advisor],
-	"c_reviewDate" : [date]
+	"c_reviewDate" : date
        }
    
     const response = await fetch(postUrl, {
