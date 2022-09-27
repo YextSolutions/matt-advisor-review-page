@@ -26,7 +26,7 @@ export const config = {
       "slug",
       "description",
       "ref_reviewsAgg.averageRating",
-      "photoGallery"
+      "c_headshot"
     ],
     filter: {
       entityTypes: ["location"],
@@ -55,7 +55,7 @@ const AdvisorPage = (data: Data) => {
     description,
     c_reviewCollectionPage,
     ref_reviewsAgg,
-    photoGallery
+    c_headshot
   } = streamOutput;
 
   const AdditionDetails = (
@@ -71,7 +71,7 @@ const AdvisorPage = (data: Data) => {
       <Layout title={c_advisorName}>
         <div className="flex gap-5">
           <div className="h-32 w-32 md:w-64 md:h-64 flex-none bg-gray-200">
-            <img src={photoGallery[0].image.url}></img>
+            <img src={c_headshot.url}></img>
           </div>
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-medium">{c_advisorName}</h1>
