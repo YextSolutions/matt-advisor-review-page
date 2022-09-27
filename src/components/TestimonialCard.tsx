@@ -11,7 +11,7 @@ type Testimonial = {
   c_status: string;
   c_authorEmail: string;
   c_content: string;
-  c_reviewDate: number;
+  c_reviewDate: string;
   name: string;
   c_additionalDisclosures: string;
   c_clientRelationshipDisclosure: string;
@@ -38,7 +38,7 @@ const TestimonialCard: CardComponent = ({ result }) => {
         <div>
           <Stars stars={t.c_rating} />
         </div>
-        <div>{dateString}</div>
+        <div>{t.c_reviewDate}</div>
       </div>
       <div>{t.c_content}</div>
       <div>
