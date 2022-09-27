@@ -26,7 +26,7 @@ export const config = {
       "slug",
       "description",
       "ref_reviewsAgg.averageRating",
-      "photoGallery[0].image.url"
+      "photoGallery"
     ],
     filter: {
       entityTypes: ["location"],
@@ -55,7 +55,7 @@ const AdvisorPage = (data: Data) => {
     description,
     c_reviewCollectionPage,
     ref_reviewsAgg,
-    photoGallery[0].image.url
+    photoGallery
   } = streamOutput;
 
   const AdditionDetails = (
