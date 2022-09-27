@@ -24,7 +24,7 @@ type Props = {
 };
 
 const config = {
-  apiKey: "3d02be42d3d4a3c8d7bb405ef5824c70",
+  apiKey: "294c2ea6ba387ac233f3036a16f0a6fd",
   experienceKey: "advisor-testimonials",
   locale: "en",
   experienceVersion: "PRODUCTION",
