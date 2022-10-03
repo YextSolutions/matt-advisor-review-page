@@ -10,6 +10,7 @@ import RadioInput from "./RadioInput";
 import StarInput from "./StarInput";
 import Stars from "./Stars";
 import TextArea from "./TextArea";
+import TextAreaMedium from "./TextAreaMedium";
 
 type Props = {
   //Insert Props Here
@@ -147,6 +148,11 @@ const ReviewGenForm = ({
                   },
                 ]}
               />
+              <TextAreaMedium
+                name="conflictDetails"
+                label="Please provide details on the nature of your conflict of interest"
+                placeholder="Please be specific."
+              />
               <RadioInput
                 name="compensation"
                 label="Have you been compensated?"
@@ -157,6 +163,11 @@ const ReviewGenForm = ({
                     value: "NO",
                   },
                 ]}
+              />
+              <TextAreaMedium
+                name="compensationDetails"
+                label="Please provide details on your compensation"
+                placeholder="Please be specific."
               />
               <Input
                 name="authorEmail"
