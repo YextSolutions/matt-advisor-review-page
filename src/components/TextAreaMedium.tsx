@@ -36,7 +36,7 @@ export const TextAreaMedium = ({
           disabled={disabled}
           defaultValue={defaultValue}
           {...register(name, { required: required })}
-          rows={5}
+          rows={4}
           className="mt-1 w-full rounded-md border border-gray-300 py-2 px-4   focus:ring-blue-500 focus:border-none group-hover:border-blue-500 group-hover:ring-1 group-hover:ring-blue-500 focus:border-blue-500"
           placeholder={placeholder}
         />
