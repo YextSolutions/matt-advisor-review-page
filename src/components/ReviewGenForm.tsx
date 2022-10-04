@@ -10,7 +10,7 @@ import RadioInput from "./RadioInput";
 import StarInput from "./StarInput";
 import Stars from "./Stars";
 import TextArea from "./TextArea";
-import TextAreaMedium from "./TextAreaMedium";
+import RadioText from "./RadioText";
 
 type Props = {
   //Insert Props Here
@@ -71,9 +71,9 @@ const ReviewGenForm = ({
                 compensation,
                 ...rest
               }) => {
-                var label1 = "";
-                var label2 = "";
-                var label3 = "";
+                let label1 = "";
+                let label2 = "";
+                let label3 = "";
 
                 if (conflictOfInterest === "YES") {
                   label1 = "CONFLICT_OF_INTEREST";
@@ -137,37 +137,35 @@ const ReviewGenForm = ({
                   },
                 ]}
               />
-              <RadioInput
-                name="conflictOfInterest"
-                label="Do you have a conflict of interest?"
-                options={[
+              <RadioText
+                radioInputName="conflictOfInterest"
+                radioInputLabel="Do you have a conflict of interest?"
+                radioInputOptions={[
                   { label: "Yes, I have a conflict of interest", value: "YES" },
                   {
                     label: "No, I don’t have a conflict of interest",
                     value: "NO",
                   },
                 ]}
+                textAreaName="conflictDetails"
+                textAreaLabel="Please provide details on the nature of your conflict of interest"
+                textAreaPlaceholder="Please be specific."
+                textAreaOpenValue="YES"
               />
-              <TextAreaMedium
-                name="conflictDetails"
-                label="Please provide details on the nature of your conflict of interest"
-                placeholder="Please be specific."
-              />
-              <RadioInput
-                name="compensation"
-                label="Have you been compensated?"
-                options={[
+              <RadioText
+                radioInputName="compensation"
+                radioInputLabel="Have you been compensated?"
+                radioInputOptions={[
                   { label: "Yes, I was compensated", value: "YES" },
                   {
                     label: "No, I have not been compensated",
                     value: "NO",
                   },
                 ]}
-              />
-              <TextAreaMedium
-                name="compensationDetails"
-                label="Please provide details on your compensation"
-                placeholder="Please be specific."
+                textAreaName="compensationDetails"
+                textAreaLabel="Please provide details on the nature of your compensation"
+                textAreaPlaceholder="Please be specific."
+                textAreaOpenValue="YES"
               />
               <Input
                 name="authorEmail"
