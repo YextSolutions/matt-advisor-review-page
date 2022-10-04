@@ -52,7 +52,7 @@ const FacetPills = ({ className }: Props) => {
                               )}
                             </div>
                             <div>
-                              {f.fieldId === "c_currentClient" && (
+                              {f.fieldId === "c_reviewLabels" && (
                                 <div>o.displayName</div>
                               )}
                             </div>
