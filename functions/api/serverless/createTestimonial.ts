@@ -7,9 +7,16 @@ export async function main(argumentJson) {
    let author = urlParams.get("author");
    let authorEmail = urlParams.get("authorEmail");
    let content = urlParams.get("content");
-   let label1 = urlParams.get("label1");
-   let label2 = urlParams.get("label2");
-   let label3 = urlParams.get("label3");
+   let labels = [];
+   if (urlParams.get("label1")) {
+    labels.push(urlParams.get("label1"));
+   }
+   if (urlParams.get("label2")) {
+    labels.push(urlParams.get("label2"));
+   }
+   if (urlParams.get("label3")) {
+    labels.push(urlParams.get("label3"));
+   }
    let rating = urlParams.get("rating");
    let advisor = urlParams.get("locationId");
    let date = urlParams.get("date");
@@ -18,19 +25,23 @@ export async function main(argumentJson) {
    let compensationDetails = urlParams.get("compensationDetails");
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
+   
+	
    let data = {
-        "name": title,
-        "c_author": author,
-        "c_authorEmail": authorEmail,
-        "c_content" : content,
+    "meta": {
+        "labels": [labels]
+    },
+    "name": title,
+    "c_author": author,
+    "c_authorEmail": authorEmail,
+    "c_content" : content,
 	"c_rating" : rating,
-	"c_labels" : [label1, label2, label3],
+	"c_labels" : [labels],
 	"c_location" : [advisor],
 	"c_reviewDate" : date,
 	"c_conflictDetails" : conflictDetails,
-	"c_compensationDetails" : compensationDetails,
-	"labels" : [label1, label2, label3]
-       }
+	"c_compensationDetails" : compensationDetails
+    }
    
     const response = await fetch(postUrl, {
         method: 'POST',
