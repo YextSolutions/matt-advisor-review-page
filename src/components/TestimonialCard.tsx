@@ -16,6 +16,7 @@ type Testimonial = {
   c_additionalDisclosures: string;
   c_clientRelationshipDisclosure: string;
   c_compensationDisclosure: string;
+  labels: string;
 };
 
 const TestimonialCard: CardComponent = ({ result }) => {
@@ -33,7 +34,6 @@ const TestimonialCard: CardComponent = ({ result }) => {
 
   return (
     <div className="flex flex-col gap-2 border rounded-sm p-4">
-      <div className="font-medium">{t.name}</div>
       <div className="flex gap-4">
         <div>
           <Stars stars={t.c_rating} />
@@ -41,6 +41,8 @@ const TestimonialCard: CardComponent = ({ result }) => {
         <div>{t.c_reviewDate}</div>
       </div>
       <div>{t.c_content}</div>
+      <div>
+      <div>{t.labels}</div>
       <div>
         <div className="text-gray-500 italic">{t.c_author}</div>
       </div>
