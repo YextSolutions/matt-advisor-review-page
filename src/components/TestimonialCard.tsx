@@ -14,8 +14,8 @@ type Testimonial = {
   c_reviewDate: string;
   name: string;
   c_additionalDisclosures: string;
-  c_clientRelationshipDisclosure: string;
-  c_compensationDisclosure: string;
+  c_compensationDetails: string;
+  c_conflictDetails: string;
 };
 
 const TestimonialCard: CardComponent = ({ result }) => {
