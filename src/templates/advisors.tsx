@@ -40,14 +40,14 @@ export const config = {
 };
 
 export const getPath: GetPath<TemplateProps> = (props) => {
-  return props.document.c_reviewCollectionSlug;
+  return props.document.slug;
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
   props
 ): HeadConfig => {
   return {
-    // title: props.document.name,
+    title: props.document.name,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
   };
