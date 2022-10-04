@@ -6,7 +6,6 @@ type testimonialSubmission = {
   };
   authorName: string;
   authorEmail: string;
-  title: string;
   rating: number;
   content: string;
   label1: string;
@@ -27,7 +26,6 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
   console.log('Posting Following Review', data);
   return axios.get ('https://gains-lather-catatonic.pgsdemo.com/serverless/createTestimonial', {
     params: {
-      title: testimonial.title,
       author: testimonial.authorName,
       authorEmail: testimonial.authorEmail,
       content: testimonial.content,
