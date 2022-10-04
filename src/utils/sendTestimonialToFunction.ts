@@ -36,7 +36,8 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       compensationDetails: testimonial.compensationDetails,
       locationId: testimonial.entity.id,
       rating: testimonial.rating,
-      date: reviewDate
+      date: reviewDate,
+      invitationUid: testimonial.invitationUid
     },
   });
 };
