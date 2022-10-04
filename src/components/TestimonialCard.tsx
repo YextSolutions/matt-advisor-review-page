@@ -13,7 +13,7 @@ type Testimonial = {
   c_content: string;
   c_reviewDate: string;
   name: string;
-  c_additionalDisclosures: string;
+  c_currentClient: string;
   c_compensationDetails: string;
   c_conflictDetails: string;
 };
@@ -44,8 +44,14 @@ const TestimonialCard: CardComponent = ({ result }) => {
         <div className="text-gray-500 italic">{t.c_author}</div>
       </div>
       {(t.c_conflictDetails ||
-        t.c_compensationDetails) && (
+        t.c_compensationDetails || t.c_currentClient) && (
         <div className="text-sm border-t pt-4">
+         {t.c_currentClient && (
+            <div>
+              <span className="font-medium text-gray-500">Current Client: </span>
+              {t.c_currentClient}
+            </div>
+          )}
           {t.c_conflictDetails && (
             <div>
               <span className="font-medium text-gray-500">
