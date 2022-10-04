@@ -1,21 +1,21 @@
 import * as React from "react";
-import { renderToString } from "react-dom/server";
+import {
+  Template,
+  GetPath,
+  TemplateRenderProps,
+  GetHeadConfig,
+  HeadConfig,
+  TemplateProps,
+} from "@yext/pages";
 import AdvisorReviews from "../components/AdvisorReviews";
 import Layout from "../components/Layout";
 import ReviewGenForm from "../components/ReviewGenForm";
 import Stars from "../components/Stars";
 import "../index.css";
-import { reactWrapper } from "../wrapper";
-import { Data } from "../types/data";
 
 export const config = {
-  name: "advisors",
-  hydrate: true,
-  streamId: "advisors",
   stream: {
     $id: "advisors",
-    source: "knowledgeGraph",
-    destination: "pages",
     fields: [
       "id",
       "uid",
@@ -25,8 +25,9 @@ export const config = {
       "c_testimonials",
       "slug",
       "description",
+      "c_reviewCollectionSlug",
       "ref_reviewsAgg.averageRating",
-      "c_headshot"
+      "c_headshot",
     ],
     filter: {
       entityTypes: ["location"],
@@ -38,13 +39,23 @@ export const config = {
   },
 };
 
-export const getPath = (data: any) => {
-  return data.document.streamOutput.slug;
+export const getPath: GetPath<TemplateProps> = (props) => {
+  return props.document.slug;
 };
 
-const AdvisorPage = (data: Data) => {
-  const { document } = data;
-  const { streamOutput } = document;
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
+  props
+): HeadConfig => {
+  return {
+    title: props.document.name,
+    charset: "UTF-8",
+    viewport: "width=device-width, initial-scale=1",
+  };
+};
+
+const AdvisorPage: Template<TemplateRenderProps> = ({
+  document,
+}: TemplateRenderProps) => {
   const {
     id,
     name,
@@ -55,8 +66,8 @@ const AdvisorPage = (data: Data) => {
     description,
     c_reviewCollectionPage,
     ref_reviewsAgg,
-    c_headshot
-  } = streamOutput;
+    c_headshot,
+  } = document;
 
   const AdditionDetails = (
     <div>
@@ -98,13 +109,5 @@ const AdvisorPage = (data: Data) => {
     </>
   );
 };
-
-export const render = (data: Data) =>
-  reactWrapper(
-    data,
-    "advisors.tsx",
-    renderToString(<AdvisorPage {...data} />),
-    true
-  );
 
 export default AdvisorPage;
