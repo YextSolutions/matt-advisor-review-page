@@ -24,6 +24,7 @@ export async function main(argumentJson) {
    let conflictDetails = urlParams.get("conflictDetails");
    let compensationDetails = urlParams.get("compensationDetails");
    let invitationUid = urlParams.get("invitationUid");
+   let currentClient = urlParams.get("currentClient");
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
    
@@ -43,7 +44,8 @@ export async function main(argumentJson) {
 	"c_reviewDate" : date,
 	"c_conflictDetails" : conflictDetails,
 	"c_compensationDetails" : compensationDetails,
-	"c_status" : "Quarantined"
+	"c_status" : "Quarantined",
+	"c_currentClient" : currentClient
     }
    
     const response = await fetch(postUrl, {
