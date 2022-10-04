@@ -3,7 +3,6 @@ export async function main(argumentJson) {
    let questionMark = url.indexOf("?");
    url = url.substring(questionMark);
    let urlParams = new URLSearchParams(url);
-   let title = urlParams.get("title");
    let author = urlParams.get("author");
    let authorEmail = urlParams.get("authorEmail");
    let content = urlParams.get("content");
@@ -26,6 +25,7 @@ export async function main(argumentJson) {
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
    
+   const title = author + ' ' + date
 	
    let data = {
     "meta": {
