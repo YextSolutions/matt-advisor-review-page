@@ -22,10 +22,11 @@ export async function main(argumentJson) {
    let key = "7579d93a8ebdcbe477e3f59f50376a04";
    let conflictDetails = urlParams.get("conflictDetails");
    let compensationDetails = urlParams.get("compensationDetails");
+   let invitationUid = urlParams.get("invitationUid");
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
    
-   const title = author + ' ' + date
+   const title = author + ' ' + date + ' ' + invitationUid
 	
    let data = {
     "meta": {
