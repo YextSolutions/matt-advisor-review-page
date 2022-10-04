@@ -33,7 +33,6 @@ const TestimonialCard: CardComponent = ({ result }) => {
 
   return (
     <div className="flex flex-col gap-2 border rounded-sm p-4">
-      <div className="font-medium">{t.name}</div>
       <div className="flex gap-4">
         <div>
           <Stars stars={t.c_rating} />
