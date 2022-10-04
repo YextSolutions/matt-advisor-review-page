@@ -43,6 +43,18 @@ const FacetPills = ({ className }: Props) => {
                             )}
                           >
                             <div>
+                              {f.fieldId === "c_rating" && (
+                                <Stars
+                                  small
+                                  stars={parseInt(o.displayName)}
+                                  hideEmpty
+                                />
+                              )}
+                              {f.fieldId !== "c_rating" && (
+                                <div>o.displayName</div>
+                              )}
+                            </div>
+                            <div>
                               {f.fieldId !== "c_currentClient" && (
                                 <div>o.displayName</div>
                               )}
