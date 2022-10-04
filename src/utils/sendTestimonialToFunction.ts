@@ -9,6 +9,7 @@ type testimonialSubmission = {
   rating: number;
   content: string;
   label1: string;
+  currentClient: string;
   label2: string;
   conflictDetails: string;
   label3: string;
@@ -31,6 +32,7 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       authorEmail: testimonial.authorEmail,
       content: testimonial.content,
       label1: testimonial.label1,
+      currentClient: testimonial.currentClient,
       label2: testimonial.label2,
       conflictDetails: testimonial.conflictDetails,
       label3: testimonial.label3,
