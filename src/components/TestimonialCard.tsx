@@ -16,7 +16,6 @@ type Testimonial = {
   c_additionalDisclosures: string;
   c_clientRelationshipDisclosure: string;
   c_compensationDisclosure: string;
-  labels: string;
 };
 
 const TestimonialCard: CardComponent = ({ result }) => {
@@ -34,6 +33,7 @@ const TestimonialCard: CardComponent = ({ result }) => {
 
   return (
     <div className="flex flex-col gap-2 border rounded-sm p-4">
+      <div className="font-medium">{t.name}</div>
       <div className="flex gap-4">
         <div>
           <Stars stars={t.c_rating} />
@@ -42,34 +42,23 @@ const TestimonialCard: CardComponent = ({ result }) => {
       </div>
       <div>{t.c_content}</div>
       <div>
-      <div>{t.labels}</div>
-      <div>
         <div className="text-gray-500 italic">{t.c_author}</div>
       </div>
-      {(t.c_clientRelationshipDisclosure ||
-        t.c_compensationDisclosure ||
-        t.c_additionalDisclosures) && (
+      {(t.c_conflictDetails ||
+        t.c_compensationDetails) && (
         <div className="text-sm border-t pt-4">
-          {t.c_clientRelationshipDisclosure && (
+          {t.c_conflictDetails && (
             <div>
               <span className="font-medium text-gray-500">
-                Client Relationship:{" "}
+                Conflict Details :{" "}
               </span>
-              {t.c_clientRelationshipDisclosure}
+              {t.c_conflictDetails}
             </div>
           )}
-          {t.c_compensationDisclosure && (
+          {t.c_compensationDetails && (
             <div>
               <span className="font-medium text-gray-500">Compensation: </span>
-              {t.c_compensationDisclosure}
-            </div>
-          )}
-          {t.c_additionalDisclosures && (
-            <div>
-              <span className="font-medium text-gray-500">
-                Additional Disclosure:{" "}
-              </span>
-              {t.c_additionalDisclosures}
+              {t.c_compensationDetails}
             </div>
           )}
         </div>
