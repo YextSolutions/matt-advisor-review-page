@@ -77,17 +77,17 @@ const ReviewGenForm = ({
                 let currentClient = "";
 
                 if (conflictOfInterest === "YES") {
-                  label1 = "CONFLICT_OF_INTEREST";
+                  label1 = "Conflict of Interest";
                   currentClient = "Yes";
                 }
                 else {
                   currentClient = "No";
                 }
                 if (compensation === "YES") {
-                  label2 = "COMPENSATION";
+                  label2 = "Compensated";
                 }
                 if (relationship === "YES") {
-                  label3 = "CURRENT_CLIENT";
+                  label3 = "Current Client";
                 }
 
                 console.log(label1, label2, label3);
