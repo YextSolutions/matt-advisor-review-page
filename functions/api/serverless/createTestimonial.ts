@@ -28,7 +28,8 @@ export async function main(argumentJson) {
 	"c_location" : [advisor],
 	"c_reviewDate" : date,
 	"c_conflictDetails" : conflictDetails,
-	"c_compensationDetails" : compensationDetails
+	"c_compensationDetails" : compensationDetails,
+	"labels" : [label1, label2, label3]
        }
    
     const response = await fetch(postUrl, {
