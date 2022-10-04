@@ -74,9 +74,11 @@ const ReviewGenForm = ({
                 let label1 = "";
                 let label2 = "";
                 let label3 = "";
+                let currentClient = "";
 
                 if (conflictOfInterest === "YES") {
                   label1 = "CONFLICT_OF_INTEREST";
+                  currentClient = "Yes";
                 }
                 if (compensation === "YES") {
                   label2 = "COMPENSATION";
