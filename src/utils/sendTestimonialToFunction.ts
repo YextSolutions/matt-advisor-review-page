@@ -38,7 +38,7 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       locationId: testimonial.entity.id,
       rating: testimonial.rating,
       date: reviewDate,
-      reviewTitleDate: reviewTitleDate
+      date2: reviewTitleDate
     },
   });
 };
