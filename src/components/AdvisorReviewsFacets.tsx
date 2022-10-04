@@ -53,7 +53,7 @@ const FacetPills = ({ className }: Props) => {
                             </div>
                             <div>
                               {f.fieldId === "c_labels" && (
-                                <div>o.value</div>
+                                <div>{o.displayName}</div>
                               )}
                             </div>
                             <div className="rounded-full bg-gray-200 text-xs px-1">
