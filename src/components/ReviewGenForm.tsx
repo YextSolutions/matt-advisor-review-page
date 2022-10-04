@@ -115,12 +115,6 @@ const ReviewGenForm = ({
               }
             >
               <StarInput name="rating" label="Stars" />
-              <Input
-                name="title"
-                label="Title of your review"
-                placeholder="Summarize your review or highlight an interesting detail"
-                required
-              />
               <TextArea
                 name="content"
                 label="Your review"
