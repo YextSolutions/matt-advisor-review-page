@@ -11,7 +11,9 @@ type testimonialSubmission = {
   content: string;
   label1: string;
   label2: string;
+  conflictDetails: string;
   label3: string;
+  compensationDetails: string;
   invitationUid?: string;
 };
 
@@ -31,7 +33,9 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       content: testimonial.content,
       label1: testimonial.label1,
       label2: testimonial.label2,
+      conflictDetails: testimonial.conflictDetails,
       label3: testimonial.label3,
+      compensationDetails: testimonial.compensationDetails,
       locationId: testimonial.entity.id,
       rating: testimonial.rating,
       date: reviewDate
