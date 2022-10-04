@@ -27,7 +27,7 @@ export async function main(argumentJson) {
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
    
-   const title = author + ' ' + date2
+   const title = 'Testimonial by ' + author + ' on ' + date2
 	
    let data = {
     "meta": {
