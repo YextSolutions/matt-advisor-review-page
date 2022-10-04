@@ -133,7 +133,7 @@ const ReviewGenForm = ({
               />
               <RadioText
                 radioInputName="conflictOfInterest"
-                radioInputLabel="Do you have a conflict of interest?"
+                radioInputLabel="Do you have a conflict of interest? (e.g. business relationship or lead sharing agreement)"
                 radioInputOptions={[
                   { label: "Yes, I have a conflict of interest", value: "YES" },
                   {
