@@ -19,6 +19,7 @@ export async function main(argumentJson) {
    let rating = urlParams.get("rating");
    let advisor = urlParams.get("locationId");
    let date = urlParams.get("date");
+   let date2 = urlParams.get("date2");
    let key = "7579d93a8ebdcbe477e3f59f50376a04";
    let conflictDetails = urlParams.get("conflictDetails");
    let compensationDetails = urlParams.get("compensationDetails");
@@ -26,7 +27,7 @@ export async function main(argumentJson) {
  
    const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=' + key + '&entityType=ce_testimonial' + '&v=20220808';
    
-   const title = author + ' ' + date + ' ' + invitationUid
+   const title = author + ' ' + date2
 	
    let data = {
     "meta": {
