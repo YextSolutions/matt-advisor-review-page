@@ -97,6 +97,7 @@ const ReviewGenForm = ({
                   label1,
                   label2,
                   label3,
+                  currentClient,
                   invitationUid,
                 });
                 setReviewSubmitted(true);
