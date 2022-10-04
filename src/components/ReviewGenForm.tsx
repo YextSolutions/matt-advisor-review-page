@@ -148,8 +148,8 @@ const ReviewGenForm = ({
                   },
                 ]}
                 textAreaName="conflictDetails"
-                textAreaLabel="Please provide a brief statement describing any material conflicts of interest resulting from your relationship with this investment advisor."
-                textAreaPlaceholder=""
+                textAreaLabel="Conflict of Interest Details"
+                textAreaPlaceholder="Please provide a brief statement describing any material conflicts of interest resulting from your relationship with this investment advisor."
                 textAreaOpenValue="YES"
               />
               <RadioText
@@ -163,8 +163,8 @@ const ReviewGenForm = ({
                   },
                 ]}
                 textAreaName="compensationDetails"
-                textAreaLabel="Please provide a description of the compensation provided or to be provided."
-                textAreaPlaceholder=""
+                textAreaLabel="Compensation Details"
+                textAreaPlaceholder="Please provide a description of the compensation provided or to be provided."
                 textAreaOpenValue="YES"
               />
               <Input
