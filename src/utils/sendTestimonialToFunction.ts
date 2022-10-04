@@ -20,6 +20,7 @@ type testimonialSubmission = {
 export const sendTestimonialToFunction = (testimonial: testimonialSubmission) => {
   // Get curent date as YYYY-MM-DD
   const reviewDate = new Date().toISOString().split('T')[0];
+  const reviewTitleDate = new Date().toISOString();
 
   const data = { ...testimonial};
 
@@ -37,7 +38,7 @@ export const sendTestimonialToFunction = (testimonial: testimonialSubmission) =>
       locationId: testimonial.entity.id,
       rating: testimonial.rating,
       date: reviewDate,
-      invitationUid: testimonial.invitationUid
+      reviewTitleDate: reviewTitleDate
     },
   });
 };
