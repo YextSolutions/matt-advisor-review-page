@@ -83,6 +83,7 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
   );
   
   const starNumber = Math.round(c_averageRating)
+  const reviewCount = {c_numberOfReviews} + 1
   
   return (
     <>
@@ -98,7 +99,7 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
             </div>
             <div className="flex gap-2 flex-col md:flex-row">
               <Stars stars={starNumber} />
-              <div>{c_numberOfReviews} Certified Advisor Reviews</div>
+              <div>{reviewCount} Certified Advisor Reviews</div>
             </div>
             <div className="hidden md:block">{AdditionDetails}</div>
           </div>
