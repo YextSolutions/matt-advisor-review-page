@@ -22,6 +22,8 @@ export const config = {
       "name",
       "address",
       "c_advisorName",
+      "c_averageRating",
+      "c_numberOfRatings",
       "c_testimonials",
       "slug",
       "description",
@@ -63,6 +65,8 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
     c_advisorName,
     c_testimonials,
     slug,
+    c_averageRating,
+    c_numberOfRatings,
     description,
     c_reviewCollectionPage,
     ref_reviewsAgg,
@@ -77,6 +81,9 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
       </a>
     </div>
   );
+  
+  const starNumber = Math.round(c_averageRating)
+  
   return (
     <>
       <Layout title={c_advisorName}>
@@ -90,8 +97,8 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
               {address?.city}, {address?.region}
             </div>
             <div className="flex gap-2 flex-col md:flex-row">
-              <Stars stars={5} />
-              <div>31 Certified Advisor Reviews</div>
+              <Stars stars={starNumber} />
+              <div>{c_numberOfRatings} Certified Advisor Reviews</div>
             </div>
             <div className="hidden md:block">{AdditionDetails}</div>
           </div>
