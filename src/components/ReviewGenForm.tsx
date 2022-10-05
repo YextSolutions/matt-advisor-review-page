@@ -80,9 +80,6 @@ const ReviewGenForm = ({
                   label1 = "Conflict of Interest";
                   currentClient = "Yes";
                 }
-                else {
-                  currentClient = "No";
-                }
                 if (compensation === "YES") {
                   label2 = "Compensated";
                 }
