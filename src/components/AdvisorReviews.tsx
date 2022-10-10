@@ -61,7 +61,7 @@ const AdvisorReviews = ({ className, advisorName }: Props) => {
             "opacity-50": loading,
           })}
         >
-          Showing {vertical.results?.length} of {vertical.resultsCount} reviews
+          Showing {vertical.results?.length} of {vertical.resultsCount} testimonials
         </div>
 
         <VerticalResults
