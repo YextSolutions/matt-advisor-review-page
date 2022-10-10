@@ -98,7 +98,7 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
             </div>
             <div className="flex gap-2 flex-col md:flex-row">
               <Stars stars={starNumber} />
-              <div>{c_numberOfReviews} Certified Advisor Reviews</div>
+              <div>{c_numberOfReviews} Certified Advisor Testimonials</div>
             </div>
             <div className="hidden md:block">{AdditionDetails}</div>
           </div>
@@ -107,7 +107,7 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
 
         <div id="review-gen">
           <h2 className="text-lg font-medium mb-2">
-            Reviews about {c_advisorName}
+            Testimonials about {c_advisorName}
           </h2>
           <ReviewGenForm advisorId={id} />
           <AdvisorReviews advisorName={c_advisorName} className="mt-8" />
