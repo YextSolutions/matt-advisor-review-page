@@ -46,7 +46,7 @@ const ReviewGenForm = ({
             className="flex justify-between items-center hover:bg-gray-200 p-4"
             type="button"
           >
-            <h3 className=" font-medium">Write a Review</h3>
+            <h3 className=" font-medium">Write a Testimonial</h3>
             <div className="flex gap-2 items-center">
               {!expanded && <Stars stars={5} />}
               <FaChevronRight
@@ -64,7 +64,7 @@ const ReviewGenForm = ({
             })}
           >
             <Form
-              successMessage="Review submitted successfully"
+              successMessage="Testimonial submitted successfully"
               onSubmit={async ({
                 relationship,
                 conflictOfInterest,
@@ -102,7 +102,7 @@ const ReviewGenForm = ({
                 });
                 setReviewSubmitted(true);
               }}
-              saveButtonLabel="Submit Review"
+              saveButtonLabel="Submit Testimonial"
               disclosure={
                 <div className="text-gray-500 text-sm">
                   <p>
@@ -120,7 +120,7 @@ const ReviewGenForm = ({
               <StarInput name="rating" label="Stars" />
               <TextArea
                 name="content"
-                label="Your review"
+                label="Your Testimonial"
                 placeholder="Be specific. Share useful information about your relationship with this finacial advisor to help other people learn more about them."
               />
               <RadioInput
@@ -172,8 +172,8 @@ const ReviewGenForm = ({
               />
               <Input
                 name="authorName"
-                label="Your Name (publicaly displayed with your review)"
-                placeholder="Summarize your review or highlight an interesting detail"
+                label="Your Name (publicaly displayed with your testimonial)"
+                placeholder="Summarize your testimonial or highlight an interesting detail"
                 required
               />
             </Form>
@@ -183,7 +183,7 @@ const ReviewGenForm = ({
       {reviewSubmitted && (
         <div className="text-center text-gray-500 text-sm p-4 block border bg-gray-100">
           <p>
-            Thank you for your review. It will be reviewed and published
+            Thank you for your testimonial. It will be reviewed and published
             shortly.
           </p>
         </div>
