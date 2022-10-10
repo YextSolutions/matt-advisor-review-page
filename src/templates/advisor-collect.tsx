@@ -63,10 +63,10 @@ const AdvisorCollectPage: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <Layout title={`Write Review for ${c_advisorName}`}>
+      <Layout title={`Write a Testimonial for ${c_advisorName}`}>
         <div className="">
           <h1 className="text-2xl font-medium mb-8">
-            Leave a review for {c_advisorName}
+            Leave a testimonial for {c_advisorName}
           </h1>
           <ReviewGenForm advisorId={id} defaultExpanded />
         </div>
