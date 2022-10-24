@@ -72,8 +72,7 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
     ref_reviewsAgg,
     c_headshot,
   } = document;
-  
-  const numberOfReviews = c_numberOfReviews + 1;
+
 
   const AdditionDetails = (
     <div>
@@ -100,7 +99,7 @@ const AdvisorPage: Template<TemplateRenderProps> = ({
             </div>
             <div className="flex gap-2 flex-col md:flex-row">
               <Stars stars={starNumber} />
-              <div>{numberOfReviews} Certified Advisor Testimonials</div>
+              <div>{c_numberOfReviews} Certified Advisor Testimonials</div>
             </div>
             <div className="hidden md:block">{AdditionDetails}</div>
           </div>
