@@ -24,6 +24,7 @@ export const config = {
       "c_testimonials",
       "slug",
       "c_reviewCollectionSlug",
+      "c_relatedATM.name"
     ],
     filter: {
       entityTypes: ["location"],
@@ -50,6 +51,7 @@ const AdvisorCollectionPage = (data: Data) => {
     c_testimonials,
     slug,
     c_reviewCollectionPage,
+    c_relatedAtm.name
   } = streamOutput;
 
   return (
@@ -57,7 +59,7 @@ const AdvisorCollectionPage = (data: Data) => {
       <Layout title={`Write Review for ${c_advisorName}`}>
         <div className="">
           <h1 className="text-2xl font-medium mb-8">
-            Leave a review for {c_advisorName}
+            Leave a review for {c_relatedATM.name}
           </h1>
           <ReviewGenForm advisorId={id} defaultExpanded />
         </div>
