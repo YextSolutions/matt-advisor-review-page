@@ -51,7 +51,7 @@ const AdvisorCollectionPage = (data: Data) => {
     c_testimonials,
     slug,
     c_reviewCollectionPage,
-    c_relatedAtm.name
+    c_relatedATM.name
   } = streamOutput;
 
   return (
