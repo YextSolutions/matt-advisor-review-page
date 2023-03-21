@@ -23,6 +23,7 @@ export const config = {
       "c_testimonials",
       "slug",
       "c_reviewCollectionSlug",
+      "c_relatedATM.name"
     ],
     filter: {
       entityTypes: ["location"],
@@ -59,14 +60,15 @@ const AdvisorCollectPage: Template<TemplateRenderProps> = ({
     c_testimonials,
     slug,
     c_reviewCollectionPage,
+    c_relatedATM.name
   } = document;
 
   return (
     <>
-      <Layout title={`Write a Testimonial for ${c_advisorName}`}>
+      <Layout title={`Write a Testimonial for ${c_relatedATM.name}`}>
         <div className="">
           <h1 className="text-2xl font-medium mb-8">
-            Leave a testimonial for {c_advisorName}
+            Leave a testimonial for {c_relatedATM.name}
           </h1>
           <ReviewGenForm advisorId={id} defaultExpanded />
         </div>
